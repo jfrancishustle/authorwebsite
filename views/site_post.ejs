@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= post.title %> - <%= user.username %></title>
+</head>
+<body>
+  <h1><%= post.title %></h1>
+  <p><small>By <a href="/u/<%= user.username %>"><%= user.username %></a> on <%= post.created_at %></small></p>
+  <hr>
+  <p><%= post.content %></p>
+  <hr>
+  <a href="/u/<%= user.username %>">Back to Home</a>
+</body>
+</html>

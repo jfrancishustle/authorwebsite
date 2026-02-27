@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard - Author SaaS</title>
+</head>
+<body>
+  <h1>Welcome to your Dashboard</h1>
+  <p>Logged in as: <strong><%= user.username %></strong></p>
+  <a href="/u/<%= user.username %>" target="_blank">View Your Site</a> |
+  <a href="/dashboard/new">Create New Post</a> |
+  <a href="/logout">Logout</a>
+  <hr>
+  <h2>Your Posts</h2>
+  <ul>
+    <% posts.forEach(post => { %>
+      <li>
+        <a href="/u/<%= user.username %>/<%= post.id %>"><%= post.title %></a>
+        <small>(<%= post.created_at %>)</small>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>

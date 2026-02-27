@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Author SaaS</title>
+</head>
+<body>
+  <h1>Welcome to Author SaaS</h1>
+  <p>Create your own author website and blog.</p>
+  <% if (user) { %>
+    <a href="/dashboard">Go to Dashboard</a>
+    <a href="/logout">Logout</a>
+  <% } else { %>
+    <a href="/login">Login</a>
+    <a href="/register">Register</a>
+  <% } %>
+</body>
+</html>
